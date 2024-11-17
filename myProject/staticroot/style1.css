@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    /* color */
+    --main-color: #522c2c;
+    --second-color: #52402C;
+    --third-color: #381010;
+    --fourth-color: #3A2727;
+    --contrast-color: #F4D8B7;
+    --help-color: #E1F2E1;
+    --white-color: #F2E0EF;
+    /* font-size */
+    --btn-text: 16px;
+    --main-text: 18px;
+    --regular-text: 24px;
+    --header-text2: 36px;
+    --header-text: 42px;
+
+    background: var(--contrast-color) url(images/fon_main.jpg);
+    background-size: contain;
+    background-position: center;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+/* Контейнеры start*/
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1 0 auto;
+    max-width: 50%;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+/* Контейнеры end*/
+
+
+header {
+    min-width: inherit;
+    height: 25vh;
+    background: var(--main-color) url(images/fon.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    position: relative;
+}
+
+main {
+    width: inherit;
+    color: var(--main-color);
+    font-size: var(--main-text);
+}
+
+footer {
+    width: inherit;
+    height: max-content;
+    background: var(--second-color) url(images/fon.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--third-color);
+}
+
+
+/*Работа с шапкой верхняя часть start*/
+.dom {
+    width: 25vw;
+    box-sizing: border-box;
+}
+
+.a-dom {
+    text-decoration: none;
+    color: var(--white-color);
+    text-shadow: 3px 3px 8px var(--main-color);
+}
+
+.a-dom:hover p {
+    font-size: var(--header-text2);
+}
+
+.a-dom:hover img {
+    width: 80px;
+}
+/*Работа с шапкой верхняя часть end*/
+
+
+/* Работа с меню start*/
+.menu {
+    width: 100%;
+    height: 8vh;
+    background: var(--main-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.allnav {
+    width: 100%;
+    list-style-type: none;
+}
+
+.allnav a {
+    text-decoration: none;
+    color: var(--help-color);
+}
+
+.allnav a:hover {
+    text-decoration: underline;
+}
+
+.allnav a:active {
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+/* Работа с меню end*/
+
+
+/* Работа с оффером start*/
+.offer {
+    height: 640px;
+    background: url(images/offer.jpg);
+    background-size: cover;
+}
+
+.offer-content {
+    height: 450px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white-color);
+    flex-direction: column;
+    gap: 8px;
+}
+/* Работа с оффером end*/
+
+
+/* Работа с каталогом услуг start*/
+.uslugi {
+    flex-direction: column;
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    gap: 60px;
+    margin: 30px 0px;
+}
+
+.card {
+    width: 40vw;
+    height: 30vw;
+    min-width: 400px;
+    min-height: 310px;
+    background: url(images/card.png);
+    background-size: contain;
+    border: none;
+    border-radius: 5px;
+}
+/* Работа с каталогом услуг end */
+
+
+/* Работа с блоком об оплате и материалах start */
+.info-glavnoe {
+    margin: 10px 7vw;
+}
+
+.card-info-glavnoe {
+    box-sizing: border-box;
+    background-color: var(--contrast-color);
+    border-radius: 5px;
+    border-left: 5px solid var(--third-color);
+    margin: 20px;
+    padding: 15px;
+}
+/* Работа с блоком об оплате и материалах end */
+
+
+/* Работа с блоком цифр start*/
+.numbers {
+    width: inherit;
+    height: 140px;
+    color: var(--help-color);
+    background-color: var(--second-color);
+}
+/* Работа с блоком цифр end*/
+
+
+/* Работа с блоком с обратной связью start*/
+.feedback {
+    height: max-content;
+    margin: 20px auto;
+}
+
+.form {
+    width: 35vw;
+    min-width: 350px;
+    background-color: var(--second-color);
+    color: var(--help-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 10px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 6px var(--contrast-color);
+    border-radius: 10px;
+}
+
+.form>h3 {
+    line-height: 1.5;
+}
+
+.form>p {
+    padding: 10px;
+}
+
+.text {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--help-color);
+    color: var(--third-color);
+    width: 100%;
+}
+
+.text::placeholder {
+    color: var(--second-color);
+}
+
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    transition: 1s;
+}
+/* Работа с блоком с обратной связью end*/
+
+
+/* Дополнительная обработка блока формы записи на встречу start*/
+.input-meeting {
+    padding: 24px;
+}
+/* Дополнительная обработка блока формы записи на встречу end*/
+
+
+/* Работа с подвалом start*/
+.footer-info {
+    width: 80vw;
+}
+
+.div-footer {
+    gap: 55px;
+    margin: 15px auto;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.inn {
+    width: 90vw;
+    margin: 5px auto;
+}
+/* Работа с подвалом end*/
+
+
+/* Работа с текстом start*/
+.main-text {
+    font-size: var(--main-text);
+}
+
+.regular-text {
+    font-size: var(--regular-text);
+}
+
+.header-text {
+    font-size: var(--header-text);
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.one-text {
+    font-family: 'Shantell Sans', cursive;
+    font-style: italic;
+    text-align: center;
+}
+
+.btn-text {
+    font-size: var(--btn-text);
+}
+/* Работа с текстом end*/
+
+
+/* Работа с изображениями start*/
+.logo {
+    width: 100px;
+}
+
+.icon {
+    margin: 10px;
+}
+
+.vverh {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.vverh:hover {
+    opacity: 1;
+}
+
+.card-picture {
+    width: 100%;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* Работа с изображениями end*/
+
+
+/* Работа с кнопками start*/
+.btn {
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: var(--btn-text);
+    padding: 20px 30px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px var(--white-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--third-color);
+}
+
+.btn:active {
+    background-color: var(--white-color);
+    color: var(--main-color);
+    box-shadow: 2px 2px 4px var(--main-color);
+}
+
+.btn-feedback {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 0px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 1px 6px;
+    font-size: var(--header-text2)
+}
+
+.btn-href {
+    text-decoration: none;
+    color: var(--white-color);
+}
+/* Работа с кнопками end*/
+
+
+/* Заглушка для страниц start */
+.brick {
+    box-sizing: border-box;
+    height: 800px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--white-color);
+    opacity: 0.5;
+    border: none;
+    padding: 10%;
+}
+/* Заглушка для страниц end */

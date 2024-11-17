@@ -1,0 +1,67 @@
+{% extends 'structure.html' %}
+
+{% block content %}
+    <section class="offer d-flex-center">
+        <section class="offer-content d-flex-center">
+            <h1 class="header-text center">НАШ ДОМ - ВАША КРЕПОСТЬ!</h1>
+            <p class="regular-text center">Строим функциональные современные одноэтажные и двухэтажные дома из
+                керамических блоков или газобетона</p>
+            <p class="regular-text center">Все проекты домов разработаны международным Архитектурным бюро Z500</p>
+            <button class="btn bold" type="button">
+                <a href="/contact_form" class="btn-href">
+                    Закажите<br> консультацию
+                </a>
+            </button>
+            <p class="one-text regular-text">Ваш УЮТНЫЙ ДОМ</p>
+        </section>
+    </section>
+
+    <section class="uslugi d-flex-evenly">
+        <h2 class="header-text center">Предлагаемые услуги</h2>
+        <section class="d-flex-center cards flex-wrap">
+            {% for offer in services_offered %}
+            <figure class="card">
+                <img class="card-picture" src="{{ offer.link_to_photo }}" alt="">
+                <figcaption>
+                    <p class="regular-text center bold">{{ offer.title }}</p>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </section>
+    </section>
+
+    <section class="info-glavnoe">
+        {% for info in info_main %}
+        <div class="card-info-glavnoe">
+            <h2>{{ info.title }}</h2>
+            <p>{{ info.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="numbers d-flex-evenly">
+        <div>
+            <p class="regular-text center">На рынке свыше</p>
+            <h2 class="header-text2 center">10 ЛЕТ</h2>
+        </div>
+        <div>
+            <p class="regular-text center">Построили более</p>
+            <h2 class="header-text2 center">200 ДОМОВ</h2>
+        </div>
+        <div>
+            <p class="regular-text center">Сдача в срок</p>
+            <h2 class="header-text2 center">98% ОБЪЕКТОВ</h2>
+        </div>
+    </section>
+
+    <h5 class="center">Проекты разработаны и являются собственностью проектного бюро Z500. Ссылка:
+        https://z500proekty.ru/</h5>
+
+    <section class="d-flex-center">
+        <button class="btn bold" type="button">
+            <a href="/form_of_record" class="btn-href">
+                Записаться <br>на встречу в офисе <br>со специалистом
+            </a>
+        </button>
+    </section>
+{% endblock %}

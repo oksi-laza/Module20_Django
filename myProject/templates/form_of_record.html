@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись на встречу в офисе</title>
+    <link rel="stylesheet" type="text/css" href = '{% static "style1.css" %}'>
+</head>
+<body>
+    <section class="modal d-flex-center">
+        {% block form-meeting %}
+        <section class="feedback d-flex-center">
+            <form method="post" class="d-flex-center form" action="">
+                {% csrf_token %}
+                <p class="main-text center">Выберите удобную дату и время встречи,
+                    и мы постараемся организовать вам ее в подходящее для вас время.</p>
+                <input class="text input-meeting" type="text" id="first_name" name="first_name" placeholder="Укажите ваше имя" maxlength="100" required>
+                <input class="text input-meeting" type="text" id="last_name" name="last_name" placeholder="Укажите вашу фамилию" maxlength="100" required>
+                <input class="text input-meeting" type="number" id="phone" name="phone" placeholder="Номер телефона" maxlength="20" required>
+                <input class="text input-meeting" type="date" id="date_of_meeting" name="date_of_meeting" placeholder="Укажите желаемую дату">
+                <select class="text input-meeting" id="meeting_time" name="meeting_time">
+                    <option value="09:00">09:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="16:00">16:00</option>
+                </select>
+                <button class="btn bold btn-feedback" type="submit">Записаться на встречу</button>
+                <div class="btn-text center">
+                    <input type="checkbox" id="check" name="check" required>Соглашаюсь с условиями конфиденциальности и передачи данных
+                </div>
+                <button class="btn btn-close">
+                    <a href="/" class="btn-href">X</a>
+                </button>
+            </form>
+        </section>
+        {% endblock %}
+    </section>
+</body>
+</html>

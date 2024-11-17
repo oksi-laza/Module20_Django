@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ title_h1 }}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href='{% static "style1.css" %}'>
+</head>
+<body>
+
+    {% block up %}
+    <a href="#">
+        <div class="vverh">⇧</div>
+    </a>
+    {% endblock %}
+
+    <header>
+        {% block header %}
+        <section class="d-flex-evenly bold">
+            <section class="dom">
+                <a href="/" class="a-dom">
+                    <figure class="d-flex-evenly">
+                        <img class="logo" src="{% static 'images/icons/logo.png' %}" alt="">
+                        <p class="header-text one-text"> УЮТНЫЙ<br> ДОМ</p>
+                    </figure>
+                </a>
+            </section>
+            <section class="d-flex-evenly flex-1">
+                <figure class="d-flex-center">
+                    <img class="icon" src="{% static 'images/icons/email.png' %}" alt="">
+                    <p>house@gmail.com</p>
+                </figure>
+                <figure class="d-flex-center center">
+                    <img class="icon" src="{% static 'images/icons/place.png' %}" alt="">
+                    <p>г. Москва<br>ул.​Мосфильмовская, 70</p>
+                </figure>
+                <figure class="d-flex-center center">
+                    <img class="icon" src="{% static 'images/icons/phone.png' %}" alt="">
+                    <p>8(495)925‒4747<br>пн-пт 9:00-20:30</p>
+                </figure>
+            </section>
+            <section class="d-flex-center">
+                <button class="btn bold" type="button">
+                    <a href="/contact_form" class="btn-href">
+                        Закажите выезд <br> специалиста
+                    </a>
+                </button>
+            </section>
+        </section>
+        <section class="menu d-flex-center">
+            <nav class="d-flex-evenly regular-text allnav">
+                <a href="/katalog_proektov_domov">Каталог проектов домов</a>
+                <a href="/foundation">Фундаменты</a>
+                <a href="/septic_tanks">Септики</a>
+                <a href="#kontakti">Контакты</a>
+                <a href="/o_kompanii">О компании</a>
+            </nav>
+        </section>
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block content %}
+        <section class="brick">
+            <h2 class="header-text center">К ОГРОМНОМУ НАШЕМУ СОЖАЛЕНИЮ, ФУНКЦИОНАЛ ДАННОЙ СТРАНИЦЫ В НАСТОЯЩЕЕ ВРЕМЯ
+                НЕДОСТУПЕН.</h2>
+            <h2 class="header-text center">ВЕДУТСЯ ТЕХНИЧЕСКИЕ РАБОТЫ.</h2>
+            <h2 class="header-text center">МЫ ПОСТАРАЕМСЯ ИСПРАВИТЬ ВСЁ КАК МОЖНО БЫСТРЕЕ.</h2>
+            <h2 class="header-text center">НАДЕЕМСЯ НА ВАШЕ ПОНИМАНИЕ!</h2>
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <section class="d-flex-evenly">
+            <section class="footer-info d-flex-center column">
+                <h2 class="header-text one-text">УЮТНЫЙ ДОМ</h2>
+                <section class="d-flex-between bold div-footer" id="kontakti">
+                    <div>
+                        <h3>Часы работы</h3>
+                        <p class="main-text">ПН-ПТ с 9:00 до 20:30</p>
+                    </div>
+                    <div>
+                        <h3>Телефон</h3>
+                        <p>+7(495)925‒4747</p>
+                    </div>
+                    <div>
+                        <h3>Почта</h3>
+                        <p>house@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул.Мосфильмовская, 70</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="inn center">
+            <h3>Реквизиты: Общество с ограниченной ответственностью "УЮТНЫЙ ДОМ" // Юридический адрес: 119136, город
+                Москва, Мосфильмовская улица, дом 70 // ОГРН (рег.номер): 1127727727727 // ИНН/КПП: 7708777777/770801001
+                // Р/С: 40702810710710000007 // Банк: АО «ТАРАМ-ПАРАМ», г. Москва // БИК: 044044044 // К/С:
+                30101810800000000777</h3>
+                <p>© ООО «УЮТНЫЙ ДОМ», 2013—2023</p>
+        </section>
+        {% endblock %}
+    </footer>
+</body>
+</html>

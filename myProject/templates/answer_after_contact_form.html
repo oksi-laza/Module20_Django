@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Успешное заполнение формы</title>
+    <link rel="stylesheet" type="text/css" href = '{% static "style1.css" %}'>
+</head>
+<body>
+    <section class="modal d-flex-center">
+        {% block answer %}
+        <section class="feedback d-flex-center">
+            <form class="d-flex-center form" action="">
+                <h3 class="center">Ваше сообщение отправлено! <br>Наш сотрудник скоро свяжется с Вами.</h3>
+                <button class="btn bold btn-feedback">
+                    <a href="/" class="btn-href">Вернуться на Главную страницу</a>
+                </button>
+            </form>
+        </section>
+        {% endblock %}
+    </section>
+</body>
+</html>

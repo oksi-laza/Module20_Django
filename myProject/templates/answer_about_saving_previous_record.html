@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дата и время остались прежними</title>
+    <link rel="stylesheet" type="text/css" href = '{% static "style1.css" %}'>
+</head>
+<body>
+    <section class="modal d-flex-center">
+        <section class="feedback d-flex-center">
+            <form class="d-flex-center form" action="">
+                <h3 class="center ">{{ first_name }}, Вы записаны на прежнее время.
+                    <br>Ожидаем Вас
+                    <br>{{ previous_date_of_meeting }} в {{ previous_meeting_time|time:"H:i" }}!
+                    <br>Наш офис находится по адреcу: <br>г.Москва, ул.Мосфильмовская, д. 70.
+                </h3>
+                <button class="btn bold btn-feedback">
+                    <a href="/" class="btn-href">Вернуться на Главную страницу</a>
+                </button>
+            </form>
+        </section>
+    </section>
+</body>
+</html>

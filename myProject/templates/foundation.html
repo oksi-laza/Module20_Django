@@ -1,0 +1,17 @@
+{% extends 'structure.html' %}
+
+{% block content %}
+    <section class="uslugi d-flex-evenly">
+        <h2 class="header-text center">Предлагаемые виды фундаментов</h2>
+        <section class="d-flex-center cards flex-wrap">
+            {% for foundation in foundations %}
+             <figure class="card">
+                <img class="card-picture" src="{{ foundation.link_to_photo }}" alt="">
+                <figcaption>
+                    <p class="regular-text center bold">{{ foundation.title }}</p>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </section>
+    </section>
+{% endblock %}

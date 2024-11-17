@@ -1,8 +1,6 @@
 # myProject
 Веб-сайт по продвижению услуг по строительству жилых частных домов или других сопутствующих услуг(фундамент, крыша, септик и т.д.)
 
-![GitHub top language](https://img.shields.io/github/languages/top/oksi-laza/Module20_Django)
-
 
 ## Установка (Windows)
 
